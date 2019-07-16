@@ -12,13 +12,11 @@ def run_game():
 	pygame.display.set_caption("Alien Invasion");
 	
 	#创建一艘飞创
-	ship = Ship(screen);
-	
-	bg_color = (230, 230, 230);
+	ship = Ship(ai_settings, screen);
 	
 	while True:
 		gf.check_event(ship);
-		
+		ship.update();
 		gf.update_screen(ai_settings, screen, ship);
 
 run_game()
