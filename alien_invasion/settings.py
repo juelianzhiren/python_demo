@@ -13,11 +13,6 @@ class Settings():
 		# 子弹设置
 		self.bullet_speed_factor = 1;
 		self.bullet_width = 3;
-<<<<<<< HEAD
-		self.bullet_heigth = 15;
-		self.bullet_color = 60, 60, 60;
-=======
 		self.bullet_height = 15;
 		self.bullet_color = (60, 60, 60);
 		self.bullets_allowed = 3
->>>>>>> b2e2948e64a06ec4e167b95da63dc5167a8e46ad

@@ -9,10 +9,6 @@ def check_keydown_event(event, ai_settings, screen, ship, bullets):
 		ship.moving_right = True;
 	elif event.key == pygame.K_LEFT:
 		ship.moving_left = True;
-<<<<<<< HEAD
-	elif event.type == pygame.K_SPACE:
-		new_bullets = Bullet(ai_settings, screen, ship)
-=======
 	elif event.key == pygame.K_SPACE:
 		fire_bulles(ai_settings, screen, ship, bullets)
 
@@ -21,7 +17,6 @@ def fire_bulles(ai_settings, screen, ship, bullets):
 	#创建一颗子弹，并将其加入到编组bullets中
 	if len(bullets) < ai_settings.bullets_allowed:
 		new_bullet = Bullet(ai_settings, screen, ship)
->>>>>>> b2e2948e64a06ec4e167b95da63dc5167a8e46ad
 		bullets.add(new_bullet)
 		
 def check_keyup_event(event, ship):
@@ -47,15 +42,9 @@ def update_screen(ai_settings, screen, ship, bullets):
 	"""更新屏幕上的图像，并切换到新屏幕上"""
 	#每次循环时都重绘屏幕
 	screen.fill(ai_settings.bg_color);
-<<<<<<< HEAD
 	
-	for bullet in bullets.sprites():
-		bullet.draw_bullet();
-	
-=======
 	for bullet in bullets.sprites():
 		bullet.draw_bullet()
->>>>>>> b2e2948e64a06ec4e167b95da63dc5167a8e46ad
 	ship.blitme();
 	
 	#让最近绘制的屏幕课件
