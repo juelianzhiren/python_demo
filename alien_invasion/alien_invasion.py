@@ -1,5 +1,6 @@
 import sys;
 import pygame;
+from pygame.sprite import Group
 
 from settings import Settings;
 from ship import Ship;
@@ -15,13 +16,18 @@ def run_game():
 	
 	#创建一艘飞创
 	ship = Ship(ai_settings, screen);
+	bullets = Group()
 	
 	bullets = Group()
 	
 	while True:
 		gf.check_event(ai_settings, screen, ship, bullets);
 		ship.update();
+<<<<<<< HEAD
 		bullets.update()
+=======
+		gf.update_bullets(bullets)
+>>>>>>> b2e2948e64a06ec4e167b95da63dc5167a8e46ad
 		gf.update_screen(ai_settings, screen, ship, bullets);
 
 run_game()
