@@ -136,6 +136,7 @@ def update_aliens(ai_settings, stats, screen, ship, aliens, bullets):
 
 def ship_hit(ai_settings, stats, screen, ship, aliens, bullets):
 	"""相应被外星人撞到的飞船"""
+	print("stats.ship_left = " + str(stats.ships_left))
 	if stats.ships_left > 0:
 		#将ship_left减1
 		stats.ships_left -= 1
@@ -151,7 +152,7 @@ def ship_hit(ai_settings, stats, screen, ship, aliens, bullets):
 		#暂停
 		sleep(0.5)
 	else:
-		stats.game_activie = False
+		stats.game_active = False
 
 def check_alien_bottom(ai_settings, stats, screen, ship, aliens, bullets):
 	"""检查是否有外星人到达了屏幕底端"""
