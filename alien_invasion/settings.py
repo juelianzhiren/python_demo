@@ -25,7 +25,7 @@ class Settings():
 		
 		self.initialize_dynamic_settings()
 		
-	def initialize_dynamic_settings(self ):
+	def initialize_dynamic_settings(self):
 		# 飞船的设置
 		self.ship_speed_factor = 1.5;
 		
